@@ -31,13 +31,12 @@ function lookUpProfile(name, prop) {
     for (let i = 0; i < contacts.length; i++) {
         if (contacts[i].firstName === name && contacts[i].hasOwnProperty(prop)){
             return contacts[i][prop];
-        } else if (!contacts[i].firstName){// !== name){
+        } else if (!contacts[i][name]){// !== name){
             return "No such contact";
         } else if (!contacts[i].hasOwnProperty(prop)){
             return "No such property";
         }
     }
-    // Only change code above this line
 }
 
-console.log(lookUpProfile("Bob", "number"));
+console.log(lookUpProfile("Kristian", "lastName"));
