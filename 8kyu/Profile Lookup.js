@@ -40,4 +40,4 @@ function lookUpProfile(name, prop) {
     // Only change code above this line
 }
 
-console.log(lookUpProfile("Kristian", "lastName"));
+console.log(lookUpProfile("Bob", "number"));
