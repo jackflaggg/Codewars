@@ -2,8 +2,8 @@
 //
 // The sorting should NOT be case sensitive
 
-function sorter(textbooks) {
-	return textbooks.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+function sorter(arr) {
+	return arr.sort((a, b) => a.toLowerCase() > b.toLowerCase() ? 1 : -1);
 }
 
-console.log(sorter(['Algebra', 'history', 'Geometry', 'english']))
+console.log(sorter(['Alg#bra', '$istory', 'Geom^try', '**english']))
