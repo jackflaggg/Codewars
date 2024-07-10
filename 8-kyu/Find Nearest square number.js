@@ -8,7 +8,7 @@
 
 function nearestSq(n){
 	console.log(Math.ceil(Math.sqrt(n)))
-	return Math.pow(Math.round(Math.sqrt(n)),2)
+	return Math.pow(Math.round(Math.sqrt(n)),2);
 }
 
 console.log(nearestSq(125)); // Output: 121
