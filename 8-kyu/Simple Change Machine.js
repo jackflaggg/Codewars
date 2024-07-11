@@ -7,32 +7,14 @@
 // This change machine is programmed to accept and distribute strings rather than numbers. The input will be a string containing the coin or note to be processed, and the change should be returned as one string with the coin names separated by single spaces with no commas. The values of the string should be in descending order. For example, an input of "50p" should yield the exact string "20p 20p 10p".
 
 function changeMe(moneyIn){
-	const values = {
-		'£5': 500,
-		'£2': 200,
-		'£1': 100,
-		'50p': 50,
-		'20p': 20
-	};
-
-	const inputMoney = values[moneyIn]
-	if(!inputMoney){
-		return moneyIn;
+	switch(moneyIn){
+		case'£5': return '20p '.repeat(25).trim();
+		case '£2': return '20p '.repeat(10).trim()
+		case '£1': return '20p '.repeat(5).trim();
+		case '50p': return '20p 20p 10p';
+		case '20p': return '10p '.repeat(2).trim()
+		default: return moneyIn
 	}
-
-	const change = [];
-	const twenties = Math.floor(inputMoney / 20); // Count of 20p coins
-	const tens = Math.floor((inputMoney % 20) / 10); // Count of 10p coins
-
-	for (let i = 0; i < twenties; i++) {
-		change.push('20p');
-	}
-
-	for (let i = 0; i < tens; i++) {
-		change.push('10p');
-	}
-
-	return change.join(' ');
 }
 
-console.log(changeMe('50p'))
+console.log(changeMe('£1'))
