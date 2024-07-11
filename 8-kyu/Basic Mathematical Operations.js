@@ -4,22 +4,13 @@
 // 	The function should return result of numbers after applying the chosen operation.
 
 function basicOp(operation, value1, value2){
-	let res = 0;
-	switch (operation){
-		case '+':
-			res = value1+value2;
-			break;
-		case '-':
-			res = value1 - value2;
-			break;
-		case '/':
-			res = value1 / value2;
-			break;
-		case '*':
-			res = value1 * value2;
-			break
+	const cases = {
+		'+': value1+value2,
+		'-': value1-value2,
+		'*': value1*value2,
+		'/': value1/value2
 	}
-	return res;
+	return cases[operation];
 }
 
 console.log(basicOp( '/',1,2));
