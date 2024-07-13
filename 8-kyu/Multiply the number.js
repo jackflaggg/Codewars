@@ -7,7 +7,7 @@
 // -3 -->   -15  ( -3 * 5¹)
 
 function multiply(number){
-	return number > 0 ? number * Math.pow(5, (String(number).length)) : number * Math.pow(5, (String(number).length - 1))
+	return number * Math.pow(5, Math.abs(number).toString().length)
 }
 
 console.log(multiply(-2))
