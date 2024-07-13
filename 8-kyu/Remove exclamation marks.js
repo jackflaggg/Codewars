@@ -1,3 +1,3 @@
 function removeExclamationMarks(s) {
-	return s.split('').filter(x => x !== '!').join('');
+	return s.split('!').join('');
 }
