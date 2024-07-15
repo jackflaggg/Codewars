@@ -4,10 +4,7 @@
 //
 // 	To make it clearer, the picture below represents the cube after (from left to right) 0, 1 and 2 cuts have been made.
 
-function countRedCuboids(cuts) {
-	return 6 * cuts ** 2 + 2
+function countSquares(cuts) {
+	return cuts <= 0 ? 1 : 6 * cuts ** 2 + 2
 }
 
-// Test cases
-console.log(countRedCuboids(2)); // Output: 26
-console.log(countRedCuboids(4)); // Output: 98
