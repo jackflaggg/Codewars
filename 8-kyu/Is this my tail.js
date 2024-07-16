@@ -5,9 +5,11 @@
 // 	The arguments will always be non empty strings, and normal letters.
 
 function correctTail(body, tail) {
-	const sub = body.substr(body.length-(tail.length))
+	const sub = body.substr(body.length-tail.length)
 	return sub === tail
 }
+
+console.log(correctTail('Fox', 'y'))
 
 
 
