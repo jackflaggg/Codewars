@@ -5,13 +5,13 @@ function logicalCalc(array, op){
 			res = array.reduce((acc, val) => acc && val, true);
 			break;
 		case 'XOR':
-			res = array.reduce((acc, val) => acc ^ val, true);
+			res = array.reduce((acc, val) => acc ^ val, false);
 			break
 		case 'OR':
-			res = array.reduce((acc, val) => acc || val, true);
+			res = array.reduce((acc, val) => acc || val, false);
 			break
 	}
-	return res;
+	return Boolean(res);
 }
 
-console.log(logicalCalc([true, true, true, false], "AND"))
+console.log(logicalCalc([true, true, true, true], "AND"))
