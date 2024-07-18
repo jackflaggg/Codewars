@@ -7,12 +7,7 @@
 // 	Task
 // Given a list of unique numbers sorted in ascending order, return a new list so that the values increment by 1 for each index from the minimum value up to the maximum value (both included).
 
-function pipeFix(numbers) {
-	let newArr = [];
-	for (let i = numbers[0]; i <= numbers[numbers.length - 1]; i++) {
-		newArr.push(i);
-	}
-	return newArr;
+function pipeFix(numbers){
+	return Array.from({length: numbers[numbers.length - 1] - numbers[0] + 1}, (_, x) => x + numbers[0])
 }
-
-console.log(pipeFix([1, 3, 5, 6, 7, 8]));
+console.log(pipeFix([2]))
