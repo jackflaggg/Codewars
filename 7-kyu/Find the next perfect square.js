@@ -1,8 +1,8 @@
 function findNextSquare(sq) {
-	if (sq > 0 && (sq & (sq - 1)) === 0) {
-		return Math.pow(Math.sqrt(sq) + 1, 2)
+	// Проверка, является ли sq совершенным квадратом
+	const root = Math.sqrt(sq);
+	if (Number.isInteger(root)) {
+		return Math.pow(root + 1, 2); // Возврат следующего совершенного квадрата
 	}
-	return -1;
+	return -1; // Если sq не совершенный квадрат, вернуть -1
 }
-
-console.log(findNextSquare(155));
